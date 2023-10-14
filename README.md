@@ -109,16 +109,19 @@ Sequential logic is sequenced by a clock signal. The circuit is constructed to e
 
 ## Identifiers and Types
    Type of an identifier determined by symbol prefix and case/delimitation style.
+   
    First token must start with two alpha chars. These determine delimitation style
-      1. ```$lower_case```: pipe signal
-      2. ```$CamelCase```: state signal (technically, this is
-             “Pascal case”)
-      3. ```$UPPER_CASE```: keyword signal
-    Numbers end tokens (after alphas)
-      1. ```$base64_value```: good
-      2. ```$bad_name_5```: bad
-    Numeric identifiers
-      1. ```>>1```: ahead by 1
+   1. ```$lower_case```: pipe signal
+   2. ```$CamelCase```: state signal (technically, this is “Pascal case”)
+   3. ```$UPPER_CASE```: keyword signal
+      
+  Numbers end tokens (after alphas)
+   1. ```$base64_value```: good
+   2. ```$bad_name_5```: bad
+      
+  Numeric identifiers
+  1. ```>>1```: ahead by 1
+     
 + Fibonacci Series in a Pipeline
   
   ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/2578382d-161f-4c6a-bfaf-11f386594532)
@@ -143,32 +146,36 @@ Sequential logic is sequenced by a clock signal. The circuit is constructed to e
   Note:1. The ```$reset = *reset``` expression should be moved under the pipeline and pipestage as well.
        2. At this point, be sure to use the Calculator Starter Code from the github repo(stevehoover).
      
-  ![Screenshot from 2023-10-12 16-18-47](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/3370513f-7c07-4dae-bac7-8f808efcc1c6)
+  ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/8db6e546-b4c1-4a24-b493-16e412dfa6f8)
+
 
 #### Cycle Calculator
   At high frequency, we might need to calculate every other cycle.
-     1. Change alignment of $out (to calculate every other cycle).
-     2. Change counter to single-bit (to indicate every other cycle).
-     3. Connect $valid (to clear alternate outputs).
-     4. Retime mux to @2 (to ease timing; no functional change).
-     5. Verify behavior in waveform.
-     6. Save.
+  1. Change alignment of $out (to calculate every other cycle).
+  2. Change counter to single-bit (to indicate every other cycle).
+  3. Connect $valid (to clear alternate outputs).
+  4. Retime mux to @2 (to ease timing; no functional change).
+  5. Verify behavior in waveform.
+  6. Save.
+     
   ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/8753b18a-e64c-4827-8a6f-b8e675feca49)
 
 ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/acde37fa-4fb3-4649-906f-969230733411)
 
 ## Validity 
 Validity provides:
-● Easier debug
-● Cleaner design
-● Better error checking
-● Automated clock gating
+  + Easier debug
+  + Cleaner design
+  + Better error checking
+  + Automated clock gating
 #### Clock Gating
 Motivation: 
-  Clock signals are distributed to EVERY flip-flop.
-  Clocks toggle twice per cycle.
-  This consumes power.
+  + Clock signals are distributed to EVERY flip-flop.
+  + Clocks toggle twice per cycle.
+  + This consumes power.
+    
 Clock gating avoids toggling clock signals.
+
 TL-Verilog can produce fine-grained gating (or enables).
 
 #### Total Distance (Makerchip walkthrough)
@@ -179,3 +186,24 @@ TL-Verilog can produce fine-grained gating (or enables).
 
 ### 2-Cycle Calculator with Validity
   
+  1. Use:
+        $valid_or_reset = $valid || $reset;
+     as a when condition for calculation instead of zeroing $out.
+
+     ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/335d2653-0007-4cb8-bb24-e0d5da9966fe)
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/d5f83e77-d74b-4abf-85f4-b87f9f395a35)
+
+### Calculator with Single-Value Memory
+  Calculators support “mem” and “recall”, to remember and recall a value.
+  1. Extend $op to 3 bits.
+  2. Verify behavior in waveform.
+  3. Add memory MUX.
+  4. Select recall value in output MUX.
+      
+  ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/5857f39b-d5ba-4eaa-804d-aedb64c308c8)
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/5637ca20-c356-4da2-9f01-11157332b6a8)
+
+</details>
+

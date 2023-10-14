@@ -68,7 +68,7 @@ Go to [makerchip.com](https://myth.makerchip.com/) and launch the makerchip ide.
   
   ![sel](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/29fa2d17-611d-4bb9-9e46-41ec4eda9be7)
 
-+ Combinational calculator
+####  Combinational calculator
   1. Implement this.
   2. Use:
         ```$val1[31:0] = $rand1[3:0] ;```
@@ -79,7 +79,7 @@ Go to [makerchip.com](https://myth.makerchip.com/) and launch the makerchip ide.
   ![calu](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/169da563-c02f-4e9d-8447-d03b097a1935)
 
 
-### Sequential Logic
+#### Sequential Logic
 Sequential logic is sequenced by a clock signal. The circuit is constructed to enter a known state in response to a reset signal. The sequential circuit in its entirety can be viewed as a state machine.
 
 + Fibonacci series
@@ -92,7 +92,7 @@ Sequential logic is sequenced by a clock signal. The circuit is constructed to e
   ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/a72ddd80-13fc-4cd5-89ad-772772a0cf6c)
   ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/84ffd54e-27e9-4167-8cdc-4afc171d4d9b)
 
-+ Sequential Calculator
+####  Sequential Calculator
   A real calculator remembers the last result, and uses it for the next calculation.
   1. Return to the calculator.
   2. Update the calculator to perform a new calculation each cycle where
@@ -136,7 +136,7 @@ Sequential logic is sequenced by a clock signal. The circuit is constructed to e
   
   which ORs together (||) various error conditions that can occur within a computation pipeline.
   
-+ Counter and Calculator in Pipeline
+####  Counter and Calculator in Pipeline
   1. Put calculator and counter in stage @1 of a |calc pipeline.
   2. Check log, diagram, and waveform.
   3. Confirm save.
@@ -145,7 +145,7 @@ Sequential logic is sequenced by a clock signal. The circuit is constructed to e
      
   ![Screenshot from 2023-10-12 16-18-47](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/3370513f-7c07-4dae-bac7-8f808efcc1c6)
 
-+ Cycle Calculator
+#### Cycle Calculator
   At high frequency, we might need to calculate every other cycle.
      1. Change alignment of $out (to calculate every other cycle).
      2. Change counter to single-bit (to indicate every other cycle).
@@ -157,3 +157,25 @@ Sequential logic is sequenced by a clock signal. The circuit is constructed to e
 
 ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/acde37fa-4fb3-4649-906f-969230733411)
 
+## Validity 
+Validity provides:
+● Easier debug
+● Cleaner design
+● Better error checking
+● Automated clock gating
+#### Clock Gating
+Motivation: 
+  Clock signals are distributed to EVERY flip-flop.
+  Clocks toggle twice per cycle.
+  This consumes power.
+Clock gating avoids toggling clock signals.
+TL-Verilog can produce fine-grained gating (or enables).
+
+#### Total Distance (Makerchip walkthrough)
+
+  ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/03f2b167-e9f3-4d5b-ad58-b677a859a786)
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/485d9c01-7ef4-434f-9aa3-6219063c6b8b)
+
+### 2-Cycle Calculator with Validity
+  

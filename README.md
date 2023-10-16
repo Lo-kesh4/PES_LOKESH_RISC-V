@@ -206,4 +206,87 @@ TL-Verilog can produce fine-grained gating (or enables).
 ![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/5637ca20-c356-4da2-9f01-11157332b6a8)
 
 </details>
+</details>
+<details>
+
+<summary><b> DAY 4 : Basic RISC-V CPU Micro Architecture </b></summary>
+
++ Introduction to Simple RISC-V Micro-architecture
+  - Micro-architecture of Single Cycle RISC-V CPU
+  - Starting Point Code for RISC-V Labs Part-1
+  - Starting Point Code for RISC-V Labs Part-2
++ Fetch and decode
+  - Implementation Plan and Lab for PC
+  - Lab For Instruction Fetch Logic
+  - Lab For RV Instruction Types IRSBJU Decode Logic
+  - Lab For Instruction Immediate Decode Logic For RV-ISBUJ
+  - Lab To Decode other Fields of Instructions For RV-ISBUJ
+  - Lab To Decode Instruction Field Based on Instr Type RV-ISBUJ
+  - Lab To Decode Individual Instruction
++ RISC-V control logic
+  - Lab For Register File Read Part-1
+  - Lab For Register File Read Part-2
+  - Lab For ALU Operations For add/addi
+  - Lab For Register File Write
+  - Concept of Array And Register File Details
+  - Lab For Implementing Branch Instructions
+  - Lab For Completing Branch Instruction Implementation
+  - Lab To Create Simple Testbench
+
+<details>
+
+<summary><b> LAB WORK </b></summary>
+### Introduction to Simple RISC-V Micro-architecture
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/f047327a-90a8-4235-b357-a355fabb1d60)
+
+### Implementation Plan
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/8d4206c6-1eee-4e77-80f7-9520e23bc231)
+
+
+The **program counter** is a pointer to the instruction memory. The output of the **instruction memory** is the memory itself which we decode using the **decode block**. Decoding gives us Rs, Rd and immediate values. These are operated on using the **ALU**. **Data memory** is also present for read and write operations.
+
+For the consecutive labs, we will use the "RISC-V lab starting point code" from [https://github.com/stevehoover/RISC-V_MYTH_Workshop](https://github.com/stevehoover/RISC-V_MYTH_Workshop). 
+
+Use the following links : [risc-v-starting-code-1](https://myth.makerchip.com/sandbox?code_url=https:%2F%2Fraw.githubusercontent.com%2Fstevehoover%2FRISC-V_MYTH_Workshop%2Fmaster%2Frisc-v_shell.tlv#)
+
+#### Risc-V-Starting Code
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/bcb5d217-10cc-4767-8334-5ec1eb234f2d)
+
+Review code containing (or including):
+1. A simple RISC-V assembler.
+2. An instruction memory containing the sum 1..9 test program.
+3. Commented code for register ﬁle and memory.
+4. Visualization.
+
+
+
+
+
+  
+</details>
+</details>
+<details>
+
+<summary><b> DAY 5 - Complete Pipelined RISC-V CPU micro-architecture </b></summary>
+
++ Pipelining the CPU
+  - Introduction To Control Flow Hazard And Read After Write Hazard
+  - Lab To Create 3-Cycle Valid Signal
+  - Lab To Code 3-Cycle RISC-V To Take Care Of Invalid Cycles
+  - Lab To Modify 3-Cycle RISC-V To Distribute Logic
++ Solutions to Pipeline Hazards
+  - Lab For Register File Bypass To Address Rd-After-Wr Hazard
+  - Lab For Branches To Correct The Branch Target Path
+  - Lab To Complete Instruction Decode Except Fence, Ecall, Ebreak
+  - Lab To Code Complete ALU
++ Load/Store Instructions and Completing RISC-V CPU
+  - Introduction To Load Store Instructions And Lab To Redirect Loads
+  - Lab To Load Data From Memory To Register File
+  - Lab To Instantiate Data Memory To The CPU
+  - Lab To Add Stores And Loads To The Test Program
+  - Lab To Add Control Logic For Jump Instructions
+  - Wrap Up
+
 

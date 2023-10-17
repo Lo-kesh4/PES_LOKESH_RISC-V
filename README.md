@@ -260,11 +260,64 @@ Review code containing (or including):
 3. Commented code for register ﬁle and memory.
 4. Visualization.
 
+#### 1. Program Counter
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/00f80722-ee0e-4b52-ae7d-d10a22ecade7)
+
+Reset $pc[31:0] to 0 if previous instruction was a “reset instruction” (>>1$reset), and increment by 1 instruction (32’d4 bytes) thereafter. (We’ll add branch support later.)
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/a3d80be9-1b6f-4f20-8a83-b42a2aad5c3e)
+
+Check PC value in simulation and conﬁrm save. PC’s after reset should be 0, 4, 8, ...
+
+#### 2. Instruction Fetch
+
+1. Uncomment //m4+imem(@1), and //m4+cpu_viz(@4) compile, and observe log errors.
+2. ```imem```expects inputs:
+    + In: ```$imem_rd_en``` (read enable)
+    + In: ```$imem_rd_addr [M4_IMEM_INDEX_CNT-1:0]``` and provides output:
+    + Out: ```$imem_rd_data[31:0]```
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/a16ee32d-df5a-4b40-8ef4-b3b3b01968c9)
+
+3. Connect imem interface to read into ```$instr[31:0]``` addressed by ```$pc[M4_IMEM_INDEX_CNT+1:2]``` enabled every cycle after reset.
+4. Check ```$instr``` in simulation and conﬁrm save.
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/e35ca3cb-4628-47eb-96b7-369ebef269d4)
+
+#### 3. Instruction Decode
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/515cded5-aa44-4c24-a0eb-8ba817e83103)
+
+#### 4. Instruction Decode with Validity
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/a4d5e7a3-09dc-441e-a67c-18daa412754f)
+
+#### 5. Individual Instruction decode
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/59abdfef-35a5-4182-98cc-e0ef8526d0c8)
 
 
+#### 6. Register file read
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/f0d91b95-95ee-4f61-81e8-f28a7ac6727a)
+
+#### 7. Arthemetic Logic Unit
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/845da358-3d72-4b6a-83e5-864bcbd17c3e)
+
+#### 8. Register File Write
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/f1104fec-cebe-4ad3-b628-cb0aa8b248c5)
+
+#### 9. Branch Instructions
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/3a2ffd40-8cdd-49dc-bfe7-6cf12647c1ea)
+
+#### 10. Testbench to check functionality
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/d583ec38-60f8-4043-b9ed-d153377ed277)
 
 
-  
 </details>
 </details>
 <details>
@@ -289,4 +342,6 @@ Review code containing (or including):
   - Lab To Add Control Logic For Jump Instructions
   - Wrap Up
 
+<details>
+<summary><b> Lab Work </b></summary>
 

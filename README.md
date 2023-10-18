@@ -344,4 +344,83 @@ Check PC value in simulation and conﬁrm save. PC’s after reset should be 0, 
 
 <details>
 <summary><b> Lab Work </b></summary>
+  
+#### 3-Cycle Valid Signal
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/4504c886-e583-4588-93d8-21b8a9f3f9a6)
+
+#### 3-cycle RISC-V to Distribute Logic
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/2e9afb5f-71be-4010-b5cd-552bc8438cc0)
+
+#### Register File Bypass
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/8e861210-965a-43f3-94a9-8681fecc911f)
+
+#### Complete Instruction Decode
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/db257e80-f083-48e6-b613-7faa5db0e285)
+
+#### Complete ALU
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/240d2262-0123-43e0-957b-7f71e7a71b9d)
+
+
+## Load & Store Instructions and Completing RISC-V CPU
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/979d3d4d-5107-4926-b39a-960178142798)
+
+#### Redirect Loads
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/f2f20a8f-dca7-4ce5-95a7-6809bb4472ef)
+
+#### Load Data From Memory to Register File
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/1372372a-da67-458d-af15-38e89217656c)
+
+#### Instantiate Data Memory to CPU
+
+In addition to all of these, we also have a Memory file for which we have load and store instructions. The Store instruction is going to write a value fetched from the register file into the memory. The Load instruction is going to access the memory, take the value from it and them load it into the register file.
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/b7ea5e68-a9f6-43cb-8afd-fb016bec47e0)
+
+#### Jump Instructions
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/e3e087d6-4269-4ac8-aeb0-02c2252bcc5f)
+
+## Wrap up
+### Final RISC-V CPU Core Implementation
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/e69f11d3-bf13-422a-b5aa-4718daae9a53)
+
+
+</details>
+</details>
+
+# Final RISC-V core block Diagram
+
+![image](https://github.com/Lo-kesh4/PES_LOKESH_RISC-V/assets/131575546/2610aa3e-2fed-4a98-acb4-ebaad0f6685c)
+
+# References
+
+You can follow the below mentioned sites for more information regarding the particular topics.
+
+- **RISC-V:** https://riscv.org/
+- **Makerchip Platform:** https://makerchip.com/
+- **TL-Verilog:** https://www.redwoodeda.com/tl-verilog  or http://tl-x.org/
+- **Redwood EDA:** https://www.redwoodeda.com/
+- **VLSI System Design:** https://www.vlsisystemdesign.com/
+
+# Acknowlegedgements
+
+- [Dr Madhura Purnaprajna](https://in.linkedin.com/in/madhurapurnaprajna) Professor, PES University
+- [Prof Mahesh Awati](https://in.linkedin.com/in/mahesh-awati-4423538b) Associate professor, PES University
+- [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+- [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
+
+# Contact Information
+
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. (Email: kunalghosh@gmail.com)
+- Steve Hoover, Founder, Redwood EDA (Email: steve.hoover@redwoodeda.com)
+- Samala Lokesh ,Student, PES University (Email : pes2ug20ec184@pesu.pes.edu)
 
